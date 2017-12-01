@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">  
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
-  <title>mongodb</title>
+  <title>login</title>
   <style>
     .wapper{
       max-width:1200px;
@@ -41,17 +41,11 @@
   </nav>
   <div class='wapper'>
     <div class="row">
-      <% if(!newsList.length){ %>
-        <p style='text-align:center'>暂时没有新闻，请管理员在后台添加！</p>
-      <%}%>
-      <% for(var i=0;i<newsList.length;i++){ %>
-          <ul class="list-group">
-              <li class="list-group-item">
-                <p>标题:<%= newsList[i].title %></p>
-                <p>详情:<%= newsList[i].content %></p>
-              </li>
-          </ul>
-      <% } %>
+      <form action="/login" method="post">
+        <label for="uname" style='margin-right:15px'>用户名</label><input type="text" id='title' name='uname' value=''> <br>
+        <label for="upwd" style='margin-right:15px'>密码</label><input id='content' type='password' name='upwd' value=''></input> <br>
+        <input type="submit" value='登录' style='padding:5px 15px;margin-top:20px;'>
+      </form>
     </div>
   </div>
   <script src="/static/js/jquery.js"></script>
